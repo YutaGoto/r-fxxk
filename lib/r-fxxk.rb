@@ -65,7 +65,7 @@ class Brainfuck
       when :dec
         cell[ptr] -= 1
       when :put
-        output << cell[ptr].chr
+        output << cell[ptr].chr(Encoding::UTF_8)
       when :get
       when :opn
         if cell[ptr] == 0
